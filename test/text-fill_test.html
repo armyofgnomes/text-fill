@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>text-fill test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../text-fill.html">
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <div style="height: 200px; width: 360px;">
+          <text-fill text="The quick brown fox jumps over the lazy dog"></text-fill>
+        </div>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="longer">
+      <template>
+        <div class="box" style="height: 100px; width: 200px;">
+          <text-fill text="Lorem ipsum dolor sit amet, oratio consectetuer est cu. Ponderum mandamus theophrastus mel ex, sit ex mutat ocurreret."></text-fill>
+        </div>
+    </template>
+    </test-fixture>
+
+    <script>
+      suite('text-fill', function() {
+
+        test('resizing the text to fill its container', function() {
+          var element = fixture('basic').querySelector('text-fill');
+          var text = Polymer.dom(element.root).querySelector('#resizedText');
+          assert.equal(text.style.fontSize, '52px');
+        });
+
+        test('resizing the text to fill its container', function() {
+          var element = fixture('longer').querySelector('text-fill');
+          var text = Polymer.dom(element.root).querySelector('#resizedText');
+          assert.equal(text.style.fontSize, '17px');
+        });
+      });
+    </script>
+  </body>
+</html>
