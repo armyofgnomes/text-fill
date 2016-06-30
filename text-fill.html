@@ -46,16 +46,17 @@ Web component to resize text to fill a container
         var area = height * width;
         if (height > 0 && width > 0) {
           var resizedText = this.$.resizedText;
+          resizedText.style.fontSize = '1px';
           var innerArea = resizedText.offsetWidth * resizedText.offsetHeight;
           var fontSize = 1;
 
           while(innerArea < area) {
-            this.$.resizedText.style.fontSize = fontSize++ + 'px';
+            resizedText.style.fontSize = fontSize++ + 'px';
             innerArea = resizedText.offsetHeight * resizedText.offsetWidth;
           }
 
           while (resizedText.offsetHeight > height) {
-            this.$.resizedText.style.fontSize = fontSize-- + 'px';
+            resizedText.style.fontSize = fontSize-- + 'px';
           }
         }
       },
