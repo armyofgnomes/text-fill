@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/armyofgnomes/text-fill.svg?branch=rs-travis)](https://travis-ci.org/armyofgnomes/text-fill)
+[![Build Status](https://travis-ci.org/armyofgnomes/text-fill.svg?branch=master)](https://travis-ci.org/armyofgnomes/text-fill)
 
 # text-fill
 Web component to resize text to fill a container
