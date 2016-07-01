@@ -9,6 +9,12 @@
     <script src="../../web-component-tester/browser.js"></script>
 
     <link rel="import" href="../text-fill.html">
+
+    <style>
+      body {
+        font-family: Arial;
+      }
+    </style>
   </head>
   <body>
 
@@ -34,20 +40,20 @@
         test('resizing the text to fill its container', function() {
           var element = fixture('basic').querySelector('text-fill');
           var text = Polymer.dom(element.root).querySelector('#resizedText');
-          assert.equal(text.style.fontSize, '52px');
+          assert.equal(text.style.fontSize, '49px');
         });
 
         test('resizing the text to fill its container', function() {
           var element = fixture('longer').querySelector('text-fill');
           var text = Polymer.dom(element.root).querySelector('#resizedText');
-          assert.equal(text.style.fontSize, '17px');
+          assert.equal(text.style.fontSize, '16px');
         });
 
         test('shrinking the text to fit its container', function() {
           var element = fixture('basic').querySelector('text-fill');
           element.text = "The brown fox wasn't actually that quick, he was actually kind of slow";
           var text = Polymer.dom(element.root).querySelector('#resizedText');
-          assert.equal(text.style.fontSize, '42px');
+          assert.equal(text.style.fontSize, '40px');
         });
       });
     </script>
