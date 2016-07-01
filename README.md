@@ -7,6 +7,8 @@ Inspired by https://github.com/jquery-textfill/jquery-textfill
 
 To use:
 
+`bower install text-fill`
+
 `<link rel="import" href="../text-fill/text-fill.html">`
 
 ```
