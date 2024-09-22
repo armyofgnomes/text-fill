@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>text-fill Demo</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../text-fill.js"></script>
+    <style>
+      p {
+        border: solid 1px blue;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" style="height: 200px; width: 360px;">
+      <text-fill text="The quick brown fox jumps over the lazy dog"></text-fill>
+    </div>
+    <div class="box" style="height: 100px; width: 200px;">
+      <text-fill
+        text="Lorem ipsum dolor sit amet, oratio consectetuer est cu. Ponderum mandamus theophrastus mel ex, sit ex mutat ocurreret."
+      >
+      </text-fill>
+    </div>
+  </body>
+</html>
