@@ -4,6 +4,8 @@ Web component to resize text to fill a container
 
 Inspired by https://github.com/jquery-textfill/jquery-textfill
 
+Built using https://github.com/lit/lit-element-starter-ts
+
 To use:
 
 `npm install text-fill`
